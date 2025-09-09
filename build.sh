@@ -12,5 +12,5 @@ flutter config --enable-web
 # Get dependencies
 flutter pub get
 
-# Build for web
-flutter build web --release
+# Build for web with source maps
+flutter build web --release --source-maps
