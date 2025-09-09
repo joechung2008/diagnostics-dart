@@ -72,6 +72,14 @@
       }
     },
     {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "text/plain"
+      }
+    },
+    {
       "src": "/version.json",
       "dest": "/version.json",
       "headers": {
