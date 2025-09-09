@@ -4,12 +4,24 @@
   "outputDirectory": "build/web",
   "routes": [
     {
-      "src": "/robots.txt",
-      "dest": "/robots.txt",
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
       "headers": {
-        "X-Content-Type-Options": "nosniff",
-        "X-Frame-Options": "DENY",
-        "X-XSS-Protection": "1; mode=block"
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/canvaskit/(.*)",
+      "dest": "/canvaskit/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/icons/(.*)",
+      "dest": "/icons/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
       }
     },
     {
@@ -20,10 +32,52 @@
       }
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1",
+      "src": "/flutter.js",
+      "dest": "/flutter.js",
       "headers": {
-        "X-Content-Type-Options": "nosniff"
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/flutter_bootstrap.js",
+      "dest": "/flutter_bootstrap.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/flutter_service_worker.js",
+      "dest": "/flutter_service_worker.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/main.dart.js",
+      "dest": "/main.dart.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block"
+      }
+    },
+    {
+      "src": "/version.json",
+      "dest": "/version.json",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json"
       }
     },
     {
