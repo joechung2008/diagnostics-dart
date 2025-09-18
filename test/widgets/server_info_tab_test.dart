@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:diagnostics_dart/widgets/server_info_tab.dart';
-import 'package:diagnostics_dart/models.dart';
+import 'package:diagnostics_flutter/widgets/server_info_tab.dart';
+import 'package:diagnostics_flutter/models.dart';
 
 void main() {
   testWidgets('ServerInfoTab displays server information', (

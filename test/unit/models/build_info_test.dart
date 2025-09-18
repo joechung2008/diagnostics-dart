@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:diagnostics_dart/models.dart';
+import 'package:diagnostics_flutter/models.dart';
 
 void main() {
   group('BuildInfo', () {

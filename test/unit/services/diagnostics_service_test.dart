@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:diagnostics_dart/models.dart';
-import 'package:diagnostics_dart/services/diagnostics_service.dart';
+import 'package:diagnostics_flutter/models.dart';
+import 'package:diagnostics_flutter/services/diagnostics_service.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/mockito.dart';
 

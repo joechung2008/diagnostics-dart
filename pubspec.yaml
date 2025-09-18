@@ -1,8 +1,8 @@
-name: diagnostics_dart
+name: diagnostics_flutter
 description: "A Flutter web application for monitoring and displaying Azure Portal Extension diagnostics across different environments."
 version: 1.0.0+1
 license: MIT
-repository: https://github.com/joechung2008/diagnostics-dart
+repository: https://github.com/joechung2008/diagnostics-flutter
 publish_to: none
 environment:
   sdk: '>=3.9.0 <4.0.0'

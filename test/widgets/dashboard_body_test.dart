@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:diagnostics_dart/widgets/dashboard_body.dart';
-import 'package:diagnostics_dart/models.dart';
-import 'package:diagnostics_dart/pages/dashboard_page.dart';
+import 'package:diagnostics_flutter/widgets/dashboard_body.dart';
+import 'package:diagnostics_flutter/models.dart';
+import 'package:diagnostics_flutter/pages/dashboard_page.dart';
 
 void main() {
   testWidgets('DashboardBody displays tabs correctly', (

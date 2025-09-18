@@ -1,4 +1,4 @@
-# diagnostics_dart
+# diagnostics_flutter
 
 A Flutter web application for monitoring and displaying Azure Portal Extension diagnostics across different environments.
 
@@ -12,8 +12,8 @@ A Flutter web application for monitoring and displaying Azure Portal Extension d
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/joechung2008/diagnostics-dart.git
-cd diagnostics-dart
+git clone https://github.com/joechung2008/diagnostics-flutter.git
+cd diagnostics-flutter
 ```
 
 2. Install dependencies:
@@ -63,22 +63,12 @@ flutter run -d web-server --release
 - **Development** (`flutter run -d chrome`): Includes hot reload, debugging tools, and development optimizations
 - **Production** (`flutter build web`): Optimized for performance, smaller bundle size, no debugging tools
 
-## Building
-
-To build the web app for production:
-
-```bash
-flutter build web
-```
-
-The built files will be in the `build/web` directory.
-
 ## Formatting
 
-Format the code using Flutter's built-in formatter:
+Format the code using Dart's built-in formatter:
 
 ```bash
-flutter format .
+dart format .
 ```
 
 ## Linting

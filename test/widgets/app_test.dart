@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:diagnostics_dart/widgets/app.dart';
-import 'package:diagnostics_dart/pages/dashboard_page.dart';
+import 'package:diagnostics_flutter/widgets/app.dart';
+import 'package:diagnostics_flutter/pages/dashboard_page.dart';
 
 void main() {
   testWidgets('App renders correctly', (WidgetTester tester) async {
