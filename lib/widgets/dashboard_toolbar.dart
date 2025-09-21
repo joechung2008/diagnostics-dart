@@ -85,11 +85,8 @@ class DashboardToolbar extends StatelessWidget {
           ).colorScheme.surfaceContainerHighest.withAlpha(76),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: isSmall
-              ? SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: row,
-                )
-              : row,
+              ? Center(child: row)
+              : Align(alignment: Alignment.centerLeft, child: row),
         );
       },
     );
