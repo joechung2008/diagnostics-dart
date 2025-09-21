@@ -39,23 +39,33 @@ class DashboardBody extends StatelessWidget {
           onShortcutPressed: onShortcutPressed,
         ),
         // Tabs
-        TabBar(
-          controller: tabController,
-          isScrollable: true,
-          indicatorSize: TabBarIndicatorSize.label,
-          tabAlignment: TabAlignment.start,
-          tabs: [
-            Tab(child: Text('Extensions', overflow: TextOverflow.ellipsis)),
-            Tab(
-              child: Text('Build Information', overflow: TextOverflow.ellipsis),
-            ),
-            Tab(
-              child: Text(
-                'Server Information',
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ],
+        LayoutBuilder(
+          builder: (context, constraints) {
+            final isDesktop = constraints.maxWidth >= 600;
+            return TabBar(
+              controller: tabController,
+              isScrollable: isDesktop,
+              indicatorSize: TabBarIndicatorSize.label,
+              tabAlignment: isDesktop
+                  ? TabAlignment.start
+                  : TabAlignment.center,
+              tabs: [
+                Tab(child: Text('Extensions', overflow: TextOverflow.ellipsis)),
+                Tab(
+                  child: Text(
+                    'Build Information',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    'Server Information',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
         // Tab content
         Expanded(

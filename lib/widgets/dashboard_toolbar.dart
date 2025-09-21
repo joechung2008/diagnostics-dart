@@ -25,53 +25,58 @@ class DashboardToolbar extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isSmall = constraints.maxWidth < 600;
-        final row = Row(
-          children: [
-            // Environment dropdown
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surface,
-                borderRadius: BorderRadius.circular(4),
-                border: Border.all(
-                  color: Theme.of(context).colorScheme.outline.withAlpha(76),
+        final row = IntrinsicWidth(
+          child: Row(
+            children: [
+              // Environment dropdown
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.surface,
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(
+                    color: Theme.of(context).colorScheme.outline.withAlpha(76),
+                  ),
+                ),
+                child: DropdownButton<Environment>(
+                  value: selectedEnvironment,
+                  onChanged: onEnvironmentChanged,
+                  items: Environment.values.map((env) {
+                    return DropdownMenuItem(
+                      value: env,
+                      child: Text(env.displayName),
+                    );
+                  }).toList(),
+                  underline: const SizedBox.shrink(),
+                  icon: Icon(
+                    Icons.arrow_drop_down,
+                    size: 20,
+                    color: Theme.of(context).colorScheme.onSurface,
+                  ),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
+                    fontSize: 14,
+                  ),
+                  dropdownColor: Theme.of(context).colorScheme.surface,
                 ),
               ),
-              child: DropdownButton<Environment>(
-                value: selectedEnvironment,
-                onChanged: onEnvironmentChanged,
-                items: Environment.values.map((env) {
-                  return DropdownMenuItem(
-                    value: env,
-                    child: Text(env.displayName),
-                  );
-                }).toList(),
-                underline: const SizedBox.shrink(),
-                icon: Icon(
-                  Icons.arrow_drop_down,
-                  size: 20,
-                  color: Theme.of(context).colorScheme.onSurface,
+              const SizedBox(width: 16),
+              if (extensions.containsKey('paasserverless'))
+                ElevatedButton(
+                  onPressed: () => onShortcutPressed('paasserverless'),
+                  child: Text(
+                    'paasserverless',
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurface,
-                  fontSize: 14,
+              const SizedBox(width: 8),
+              if (extensions.containsKey('websites'))
+                ElevatedButton(
+                  onPressed: () => onShortcutPressed('websites'),
+                  child: Text('websites', overflow: TextOverflow.ellipsis),
                 ),
-                dropdownColor: Theme.of(context).colorScheme.surface,
-              ),
-            ),
-            const SizedBox(width: 16),
-            if (extensions.containsKey('paasserverless'))
-              ElevatedButton(
-                onPressed: () => onShortcutPressed('paasserverless'),
-                child: Text('paasserverless', overflow: TextOverflow.ellipsis),
-              ),
-            const SizedBox(width: 8),
-            if (extensions.containsKey('websites'))
-              ElevatedButton(
-                onPressed: () => onShortcutPressed('websites'),
-                child: Text('websites', overflow: TextOverflow.ellipsis),
-              ),
-          ],
+            ],
+          ),
         );
 
         return Container(
