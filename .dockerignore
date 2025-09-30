@@ -1,0 +1,27 @@
+# Ignore build outputs
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Ignore environment files
+.env
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.iml
+
+# Ignore macOS and Linux build folders
+macos/
+linux/
+windows/
+
+# Ignore test outputs
+coverage/
+
+# Ignore web build outputs
+web/generated_plugin_registrant.dart
