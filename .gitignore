@@ -45,3 +45,106 @@ test-results/
 
 # Flutter cloned by build.sh
 flutter
+
+# Android related
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# iOS/XCode related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/*.xcodeproj/xcuserdata
+**/ios/**/*.xcodeproj/project.xcworkspace/xcuserdata
+**/ios/**/*.moved-aside
+**/ios/**/Index/
+**/ios/**/Index.noindex/
+**/ios/**/DerivedData/
+**/ios/**/*.hmap
+**/ios/**/*.ipa
+**/ios/**/*.xcuserstate
+**/ios/**/symroot/
+
+# macOS
+**/macos/**/*.mode1v3
+**/macos/**/*.mode2v3
+**/macos/**/*.moved-aside
+**/macos/**/*.pbxuser
+**/macos/**/*.perspectivev3
+**/macos/**/*sync/
+**/macos/**/.sconsign.dblite
+**/macos/**/.tags*
+**/macos/**/.vagrant/
+**/macos/**/*.xcodeproj/xcuserdata
+**/macos/**/*.xcodeproj/project.xcworkspace/xcuserdata
+**/macos/**/*.moved-aside
+**/macos/**/Index/
+**/macos/**/Index.noindex/
+**/macos/**/DerivedData/
+**/macos/**/*.hmap
+**/macos/**/*.ipa
+**/macos/**/*.xcuserstate
+**/macos/**/symroot/
+**/macos/**/GeneratedPluginRegistrant.swift
+
+# Linux
+**/linux/**/*.mode1v3
+**/linux/**/*.mode2v3
+**/linux/**/*.moved-aside
+**/linux/**/*.pbxuser
+**/linux/**/*.perspectivev3
+**/linux/**/*sync/
+**/linux/**/.sconsign.dblite
+**/linux/**/.tags*
+**/linux/**/.vagrant/
+**/linux/**/*.xcodeproj/xcuserdata
+**/linux/**/*.xcodeproj/project.xcworkspace/xcuserdata
+**/linux/**/*.moved-aside
+**/linux/**/Index/
+**/linux/**/Index.noindex/
+**/linux/**/DerivedData/
+**/linux/**/*.hmap
+**/linux/**/*.ipa
+**/linux/**/*.xcuserstate
+**/linux/**/symroot/
+**/linux/**/generated_plugin_registrant.cc
+**/linux/**/generated_plugin_registrant.h
+**/linux/**/generated_plugins.cmake
+
+# Windows
+**/windows/**/*.mode1v3
+**/windows/**/*.mode2v3
+**/windows/**/*.moved-aside
+**/windows/**/*.pbxuser
+**/windows/**/*.perspectivev3
+**/windows/**/*sync/
+**/windows/**/.sconsign.dblite
+**/windows/**/.tags*
+**/windows/**/.vagrant/
+**/windows/**/*.xcodeproj/xcuserdata
+**/windows/**/*.xcodeproj/project.xcworkspace/xcuserdata
+**/windows/**/*.moved-aside
+**/windows/**/Index/
+**/windows/**/Index.noindex/
+**/windows/**/DerivedData/
+**/windows/**/*.hmap
+**/windows/**/*.ipa
+**/windows/**/*.xcuserstate
+**/windows/**/symroot/
+
+# Web
+**/web/index.html
+
+# Exceptions to above rules.
+!packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
